@@ -27,23 +27,25 @@ function bootPairCount(bootStr) {
   }
 
   sort = temp;
-  // console.log(sort)
+  console.log(sort)
 
   //cek pasangan
   var panjangSort = sort.length;
   var count = 0;
 
   for(var i=0;i<panjangSort;i++){
+    
     if(sort[i] === sort[i+1]){
       count += 1;
-      i++;
+      i++
     }
 
-    if (count === 0){
-      return ('Tidak ada pasangan sepatu boot ditemukan')
-    }
+
+    
   }
-
+  if (count === 0){
+  return ('Tidak ada pasangan sepatu boot ditemukan')
+  }
   // console.log(sort)
   return count
 
@@ -54,3 +56,4 @@ console.log(bootPairCount("ABBAACDAB")); // 3
 console.log(bootPairCount("ABBCCDAD")); // 4
 console.log(bootPairCount("ABCDE")); // Tidak ada pasangan sepatu boot ditemukan
 console.log(bootPairCount()); // Tidak ada sepatu boot mohon cek kembali input anda
+console.log(bootPairCount("XXXXBIBBA"));
